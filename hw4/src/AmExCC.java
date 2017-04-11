@@ -17,7 +17,8 @@ public class AmExCC extends CreditCard{
      * @param ccNum the credit card number to check
      * @return true if it is a valid AmExCC#, false if it is not
      */
-    public static boolean isValid(String ccNum){
+    public static boolean isCardType(String ccNum){
+        
         String num = ccNum;
         //Length is 15 digits.
         if(num.length()==CC_NUM_LENGTH){

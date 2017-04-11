@@ -11,7 +11,7 @@ public class DiscoverCC extends CreditCard{
     private static final char FOURTH_DIGIT = '1';
     private final String CC_NUMBER;
 
-    static boolean isValid(String ccNum) {
+    static boolean isValidDiscover(String ccNum) {
         if(ccNum.length()==CC_NUM_LENGTH && 
                 ccNum.charAt(0)==FIRST_DIGIT && 
                 ccNum.charAt(1)==SECOND_DIGIT && 
@@ -21,6 +21,8 @@ public class DiscoverCC extends CreditCard{
         }
         return false;
     }
+    
+    
 
     DiscoverCC(String ccNumber) {
         CC_NUMBER = ccNumber;

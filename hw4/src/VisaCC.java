@@ -9,8 +9,11 @@ public class VisaCC extends CreditCard{
     private static final char FIRST_DIGIT = '4';
     
     private final String CC_NUMBER;
+    public VisaCC(String ccNumber) {
+           CC_NUMBER = ccNumber;
+    }
     
-    static boolean isValid(String ccNum) {
+    public static boolean isValidType(String ccNum) {
         int len = ccNum.length();
         if((len==CC_NUM_LENGTH_OPTION_ONE || len==CC_NUM_LENGTH_OPTION_TWO) && ccNum.charAt(0)==FIRST_DIGIT ){
             return true;
@@ -18,8 +21,6 @@ public class VisaCC extends CreditCard{
         return false;
     }
 
-    public VisaCC(String ccNumber) {
-           CC_NUMBER = ccNumber;
-    }
+    
     
 }
